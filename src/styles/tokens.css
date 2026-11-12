@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Design Tokens — Vardan Raj Portfolio ("Packet Journey")
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --bg: #0b0b0d;
+  --bg-elevated: #121216;
+  --bg-card: #16161b;
+  --text: #f4f4f0;
+  --text-muted: #9a9aa6;
+  --text-dim: #6c6c78;
+  --border: rgba(244, 244, 240, 0.12);
+  --border-strong: rgba(244, 244, 240, 0.28);
+  --accent: #ff4b1f;
+  --accent-soft: rgba(255, 75, 31, 0.14);
+
+  /* Typography */
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Layout & Spacing */
+  --container-max: 1380px;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --section-py: clamp(5.5rem, 10vw, 9.5rem);
+
+  /* Z-index layers */
+  --z-canvas: 0;
+  --z-content: 10;
+  --z-hud: 100;
+  --z-grain: 900;
+  --z-cursor: 950;
+  --z-loader: 1000;
+}

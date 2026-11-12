@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vardan Raj — Network Engineer × Graphic Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Vardan Raj — CSE undergraduate at ABES Engineering College, aspiring Network & Cyber Security Engineer (CCNA), and Graphic Designer / Video Editor."
+    />
+    <meta name="theme-color" content="#0b0b0d" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0d'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ff4b1f'/%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts: Bebas Neue, Space Grotesk, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="is-loading">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- 2D Network Canvas & Print Grain -->
+    <canvas id="packet-canvas" aria-hidden="true"></canvas>
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-label" aria-hidden="true">View</div>
+
+    <!-- Terminal Boot Loader -->
+    <div class="boot-loader" role="status" aria-label="Loading portfolio">
+      <div class="boot-terminal">
+        <div class="boot-terminal-bar">
+          <span>PACKET_TRACE // VARDAN.RAJ</span>
+          <span>TTL=64</span>
+        </div>
+        <ul class="boot-lines">
+          <li class="boot-line"><span class="tag">[01]</span>traceroute to vardanraj.dev (ghaziabad, in)</li>
+          <li class="boot-line"><span class="tag">[02]</span>resolving dual-stack: net_sec + visual_design</li>
+          <li class="boot-line"><span class="tag">[OK]</span>route established — 6 hops ready</li>
+        </ul>
+        <div class="boot-progress-track">
+          <div class="boot-progress-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed Packet Progress & Hop Navigation -->
+    <header class="packet-hud">
+      <div class="packet-progress-track" aria-hidden="true">
+        <div class="packet-progress-bar"></div>
+      </div>
+      <div class="container hud-inner">
+        <a href="#top" class="hud-brand">
+          <span class="hud-brand-dot" aria-hidden="true"></span>
+          <span>VR // PKT</span>
+        </a>
+
+        <nav class="hud-nav" aria-label="Packet hops">
+          <a href="#who" class="hud-link"><span>01</span>who</a>
+          <a href="#wires" class="hud-link"><span>02</span>wires</a>
+          <a href="#builds" class="hud-link"><span>03</span>builds</a>
+          <a href="#visuals" class="hud-link"><span>04</span>visuals</a>
+          <a href="#toolkit" class="hud-link"><span>05</span>toolkit</a>
+          <a href="#destination" class="hud-link"><span>06</span>destination</a>
+        </nav>
+
+        <div class="hud-status" aria-live="polite">
+          HOP: <strong id="hud-active-hop">origin</strong>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- HERO -->
+      <section id="top" class="hero" data-hop="origin">
+        <div class="container">
+          <div class="hero-name-wrap">
+            <h1 class="hero-name" data-cursor="big" aria-label="Vardan Raj">
+              <span class="reveal-mask"><span class="reveal-line hero-name-solid">VARDAN</span></span>
+              <span class="reveal-mask"><span class="reveal-line hero-name-outline">RAJ</span></span>
+            </h1>
+          </div>
+
+          <div class="hero-bottom hero-fade">
+            <p class="hero-role">
+              Network Engineer <span class="cross" aria-hidden="true">×</span> Graphic Designer
+            </p>
+
+            <a href="#who" class="scroll-hint" data-magnetic="0.25">
+              <span>Trace Packet</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+                <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE TICKER -->
+      <div class="marquee-band" aria-label="Core disciplines and tools">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span class="marquee-item">CCNA PATH</span>
+            <span class="marquee-sep" aria-hidden="true">✦</span>
+            <span class="marquee-item">CYBER SECURITY</span>
+            <span class="marquee-sep" aria-hidden="true">✦</span>
+            <span class="marquee-item">BRANDING</span>
+            <span class="marquee-sep" aria-hidden="true">✦</span>
+            <span class="marquee-item">PACKET ANALYSIS</span>
+            <span class="marquee-sep" aria-hidden="true">✦</span>
+            <span class="marquee-item">POSTERS</span>
+            <span class="marquee-sep" aria-hidden="true">✦</span>
+            <span class="marquee-item">VIDEO EDITING</span>
+            <span class="marquee-sep" aria-hidden="true">✦</span>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <span class="marquee-item">CCNA PATH</span>
+            <span class="marquee-sep">✦</span>
+            <span class="marquee-item">CYBER SECURITY</span>
+            <span class="marquee-sep">✦</span>
+            <span class="marquee-item">BRANDING</span>
+            <span class="marquee-sep">✦</span>
+            <span class="marquee-item">PACKET ANALYSIS</span>
+            <span class="marquee-sep">✦</span>
+            <span class="marquee-item">POSTERS</span>
+            <span class="marquee-sep">✦</span>
+            <span class="marquee-item">VIDEO EDITING</span>
+            <span class="marquee-sep">✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 01 WHO -->
+      <section id="who" class="section-block" data-hop="who">
+        <div class="container">
+          <header class="hop-header reveal-on-scroll">
+            <div>
+              <span class="hop-tag">01 who</span>
+              <h2 class="hop-title" data-cursor="big">
+                <span class="reveal-mask"><span class="reveal-line">Source Node</span></span>
+              </h2>
+            </div>
+          </header>
+
+          <div class="about-grid">
+            <div>
+              <h3
+                class="about-poster reveal-on-scroll"
+                data-cursor="big"
+                aria-label="I secure the wires and design the wow."
+              >
+                <span class="reveal-mask"><span class="reveal-line">I SECURE THE</span></span>
+                <span class="reveal-mask"><span class="reveal-line accent">WIRES</span></span>
+                <span class="reveal-mask"><span class="reveal-line">AND DESIGN THE</span></span>
+                <span class="reveal-mask"><span class="reveal-line"><span class="accent">WOW</span>.</span></span>
+              </h3>
+            </div>
+
+            <div class="terminal-card" aria-label="Terminal profile summary">
+              <div class="terminal-header">
+                <div class="terminal-dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <span>vardan@abes-net: ~</span>
+              </div>
+              <div class="terminal-body">
+                <div>
+                  <div class="cmd-line"><span class="cmd-prompt">$</span>whoami</div>
+                  <div class="cmd-output">
+                    <strong>Vardan Raj</strong> — B.Tech CSE Undergraduate, ABES Engineering
+                    College, Ghaziabad, India.
+                  </div>
+                </div>
+
+                <div>
+                  <div class="cmd-line"><span class="cmd-prompt">$</span>cat goal.txt</div>
+                  <div class="cmd-output">
+                    Network Engineer &amp; Cyber Security practitioner. Focused on packet-level
+                    visibility, protocol anomaly detection, and fault-tolerant local infrastructure
+                    — paired with visual storytelling and motion design.
+                  </div>
+                </div>
+
+                <div>
+                  <div class="cmd-line"><span class="cmd-prompt">$</span>status --cert</div>
+                  <div class="cmd-output">
+                    <span class="status-badge">CCNA IN PROGRESS</span> Routing &amp; Switching,
+                    Subnetting, VLANs, ACLs, Wireshark / PCAP Forensics.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 WIRES (Full-Bleed Split) -->
+      <section id="wires" class="section-split" data-hop="wires">
+        <div class="container">
+          <header class="hop-header reveal-on-scroll">
+            <div>
+              <span class="hop-tag">02 wires</span>
+              <h2 class="hop-title" data-cursor="big">
+                <span class="reveal-mask"><span class="reveal-line">Dual-Stack Craft</span></span>
+              </h2>
+            </div>
+          </header>
+        </div>
+
+        <div class="split-grid">
+          <article class="split-half split-half--net">
+            <div>
+              <h3 class="split-heading" data-cursor="big">Network &amp;<br />Security</h3>
+              <p class="split-desc">
+                Inspecting traffic on the wire, hunting covert DNS channels, and engineering
+                local-first systems that hold up when internet links degrade.
+              </p>
+            </div>
+            <ul class="split-list">
+              <li><span>Protocol Analysis</span><span>TCP/IP · DNS · HTTP</span></li>
+              <li><span>Packet Capture</span><span>Wireshark · PCAP</span></li>
+              <li><span>Certification</span><span>CCNA Prep</span></li>
+              <li><span>Systems Stack</span><span>Node.js · React</span></li>
+            </ul>
+          </article>
+
+          <article class="split-half split-half--design">
+            <div>
+              <h3 class="split-heading" data-cursor="big">Graphics &amp;<br />Motion</h3>
+              <p class="split-desc">
+                Designing bold poster systems, social rollouts, and fast-paced video edits for
+                college-scale audiences across live cultural and talent events.
+              </p>
+            </div>
+            <ul class="split-list">
+              <li><span>Key Art &amp; Print</span><span>Posters · Stage</span></li>
+              <li><span>Social Media</span><span>Campaign Grids</span></li>
+              <li><span>Video Editing</span><span>Reels · Aftermovies</span></li>
+              <li><span>Fest Teams</span><span>AGT · Genero · Saarang</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 03 BUILDS -->
+      <section id="builds" class="section-block" data-hop="builds">
+        <div class="container">
+          <header class="hop-header reveal-on-scroll">
+            <div>
+              <span class="hop-tag">03 builds</span>
+              <h2 class="hop-title" data-cursor="big">
+                <span class="reveal-mask"><span class="reveal-line">Engineering Builds</span></span>
+              </h2>
+            </div>
+          </header>
+
+          <div class="projects-list">
+            <article class="project-row">
+              <button class="project-trigger" type="button" aria-expanded="false">
+                <span class="project-index">01</span>
+                <div class="project-main">
+                  <div class="project-title-wrap">
+                    <h3 class="project-title" data-cursor="big">Net Observer</h3>
+                    <span class="project-live-badge">
+                      <span class="live-dot" aria-hidden="true"></span>Live
+                    </span>
+                  </div>
+                  <span class="project-stack">React · Vite · Tailwind · Node.js</span>
+                </div>
+                <span class="project-arrow" aria-hidden="true">+</span>
+              </button>
+              <div class="project-panel">
+                <div class="project-panel-inner">
+                  <div class="project-details">
+                    <p class="project-summary">
+                      Real-time network traffic dashboard built to visualize active connections,
+                      protocol distribution, and bandwidth spikes through a low-latency Node backend
+                      and responsive React interface.
+                    </p>
+                    <ul class="project-highlights">
+                      <li>Live traffic telemetry &amp; protocol breakdown</li>
+                      <li>Fast Vite + Tailwind operator interface</li>
+                      <li>Structured Node.js ingestion pipeline</li>
+                    </ul>
+                    <div class="project-links">
+                      <a
+                        href="https://net-observer.onrender.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link project-link--live"
+                        data-magnetic="0.2"
+                      >
+                        Launch Live Demo ↗
+                      </a>
+                      <a
+                        href="https://github.com/vardanraj/PacketTracer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                        data-magnetic="0.2"
+                      >
+                        View Code ↗
+                      </a>
+                    </div>
+                    <p class="project-note">
+                      Hosted on a free tier, so the first load may take up to a minute to wake up.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-row">
+              <button class="project-trigger" type="button" aria-expanded="false">
+                <span class="project-index">02</span>
+                <div class="project-main">
+                  <h3 class="project-title" data-cursor="big">DNS Tunneling Detection</h3>
+                  <span class="project-stack">Real-Time · PCAP Analysis · DNS</span>
+                </div>
+                <span class="project-arrow" aria-hidden="true">+</span>
+              </button>
+              <div class="project-panel">
+                <div class="project-panel-inner">
+                  <div class="project-details">
+                    <p class="project-summary">
+                      Security inspection workflow combining live DNS query monitoring with offline
+                      PCAP analysis to flag high-entropy subdomains, abnormal query frequencies, and
+                      suspected data exfiltration tunnels.
+                    </p>
+                    <ul class="project-highlights">
+                      <li>Dual mode: live capture + PCAP replay</li>
+                      <li>Entropy &amp; payload-length anomaly heuristics</li>
+                      <li>Built for rapid SOC/network triage</li>
+                    </ul>
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/vardanraj/Hcl_AeigesDNS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                        data-magnetic="0.2"
+                      >
+                        View Code on GitHub ↗
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 VISUALS -->
+      <section id="visuals" class="section-block" data-hop="visuals">
+        <div class="container">
+          <header class="hop-header reveal-on-scroll">
+            <div>
+              <span class="hop-tag">04 visuals</span>
+              <h2 class="hop-title" data-cursor="big">
+                <span class="reveal-mask"><span class="reveal-line">Design &amp; Motion</span></span>
+              </h2>
+            </div>
+          </header>
+
+          <div class="designs-grid">
+            <article class="design-tile design-tile--wide">
+              <button type="button" class="design-card design-tile-btn" aria-label="Open ABES Got Talent Grid in lightbox">
+                <div class="design-poster-frame">
+                  <img
+                    src="/designs/agt-grid.png"
+                    alt="ABES Got Talent social media grid graphic designed by Vardan Raj"
+                    width="3240"
+                    height="1350"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="design-caption">
+                  <h3 class="design-title">ABES Got Talent Grid</h3>
+                  <span class="design-role">Graphics &amp; Social</span>
+                </div>
+              </button>
+            </article>
+
+            <article class="design-tile">
+              <button type="button" class="design-card design-tile-btn" aria-label="Open Saarang Result in lightbox">
+                <div class="design-poster-frame">
+                  <img
+                    src="/designs/FF%20result%20Saarang.png"
+                    alt="Saarang festival result announcement poster designed by Vardan Raj"
+                    width="1545"
+                    height="2000"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="design-caption">
+                  <h3 class="design-title">Saarang Result</h3>
+                  <span class="design-role">Graphics &amp; Social</span>
+                </div>
+              </button>
+            </article>
+
+            <article class="design-tile">
+              <button type="button" class="design-card design-tile-btn" aria-label="Open Makar Sankranti in lightbox">
+                <div class="design-poster-frame">
+                  <img
+                    src="/designs/makar-sankranti.png"
+                    alt="Makar Sankranti festive social poster designed by Vardan Raj"
+                    width="1080"
+                    height="1920"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="design-caption">
+                  <h3 class="design-title">Makar Sankranti</h3>
+                  <span class="design-role">Graphics &amp; Social</span>
+                </div>
+              </button>
+            </article>
+
+            <article class="design-tile design-tile--wide">
+              <button type="button" class="design-card design-tile-btn" aria-label="Open Fest Social Grid in lightbox">
+                <div class="design-poster-frame">
+                  <img
+                    src="/designs/grid.png"
+                    alt="Campus fest Instagram grid layout designed by Vardan Raj"
+                    width="3250"
+                    height="1350"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="design-caption">
+                  <h3 class="design-title">Fest Social Grid</h3>
+                  <span class="design-role">Graphics &amp; Social</span>
+                </div>
+              </button>
+            </article>
+
+            <article class="design-tile">
+              <button type="button" class="design-card design-tile-btn" aria-label="Open Mundan Ceremony in lightbox">
+                <div class="design-poster-frame">
+                  <img
+                    src="/designs/mundan.png"
+                    alt="Mundan ceremony invitation and event poster designed by Vardan Raj"
+                    width="1080"
+                    height="1920"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="design-caption">
+                  <h3 class="design-title">Mundan Ceremony</h3>
+                  <span class="design-role">Graphics &amp; Social</span>
+                </div>
+              </button>
+            </article>
+
+            <article class="design-tile">
+              <button type="button" class="design-card design-tile-btn" aria-label="Open Save Nature in lightbox">
+                <div class="design-poster-frame">
+                  <img
+                    src="/designs/save-nature.png"
+                    alt="Save Nature awareness poster designed by Vardan Raj"
+                    width="1587"
+                    height="2245"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="design-caption">
+                  <h3 class="design-title">Save Nature</h3>
+                  <span class="design-role">Graphics &amp; Social</span>
+                </div>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 TOOLKIT -->
+      <section id="toolkit" class="section-block" data-hop="toolkit">
+        <div class="container">
+          <header class="hop-header reveal-on-scroll">
+            <div>
+              <span class="hop-tag">05 toolkit</span>
+              <h2 class="hop-title" data-cursor="big">
+                <span class="reveal-mask"><span class="reveal-line">Active Stack</span></span>
+              </h2>
+            </div>
+          </header>
+
+          <div class="toolkit-groups">
+            <div class="toolkit-group">
+              <h3 class="toolkit-group-title">Networking &amp; Security</h3>
+              <div class="chips-wrap">
+                <span class="chip chip--highlight">
+                  <span class="chip-dot" aria-hidden="true"></span>CCNA (In Progress)
+                </span>
+                <span class="chip">Wireshark / PCAP</span>
+                <span class="chip">TCP/IP</span>
+                <span class="chip">DNS</span>
+              </div>
+            </div>
+
+            <div class="toolkit-group">
+              <h3 class="toolkit-group-title">Web &amp; Systems</h3>
+              <div class="chips-wrap">
+                <span class="chip">React</span>
+                <span class="chip">Node.js</span>
+                <span class="chip">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="toolkit-group">
+              <h3 class="toolkit-group-title">Design &amp; Motion</h3>
+              <div class="chips-wrap">
+                <span class="chip">Graphic Design</span>
+                <span class="chip">Video Editing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 DESTINATION -->
+      <section id="destination" class="section-contact" data-hop="destination">
+        <div class="container">
+          <header class="hop-header reveal-on-scroll">
+            <div>
+              <span class="hop-tag">06 destination</span>
+              <h2 class="hop-title" data-cursor="big">
+                <span class="reveal-mask"><span class="reveal-line">End of Route</span></span>
+              </h2>
+            </div>
+          </header>
+
+          <a
+            href="mailto:vardanraj82@gmail.com"
+            class="contact-giant-link"
+            data-cursor="big"
+            data-magnetic="0.15"
+          >
+            Let's connect
+          </a>
+          <p class="contact-email-sub">vardanraj82@gmail.com</p>
+
+          <div class="contact-links-grid">
+            <a href="mailto:vardanraj82@gmail.com" class="contact-link-card" data-magnetic="0.18">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">vardanraj82@gmail.com</span>
+            </a>
+
+            <a href="tel:+917310568957" class="contact-link-card" data-magnetic="0.18">
+              <span class="contact-link-label">Phone</span>
+              <span class="contact-link-value">+91 7310568957</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/vardan-raj-y"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="contact-link-card"
+              data-magnetic="0.18"
+            >
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">linkedin.com/in/vardan-raj-y</span>
+            </a>
+
+            <a
+              href="https://github.com/vardanraj"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="contact-link-card"
+              data-magnetic="0.18"
+            >
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/vardanraj</span>
+            </a>
+          </div>
+
+          <footer class="site-footer">
+            <span>VARDAN RAJ // GHAZIABAD, INDIA</span>
+            <span>HOP 06 // PACKET DELIVERED</span>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- Design Lightbox Modal -->
+    <div
+      id="lightbox"
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-title"
+      hidden
+    >
+      <div class="lightbox-backdrop" data-lightbox-close></div>
+      <div class="lightbox-dialog">
+        <div class="lightbox-topbar">
+          <span class="lightbox-counter" id="lightbox-counter">1 / 7</span>
+          <button
+            type="button"
+            class="lightbox-btn lightbox-close"
+            aria-label="Close lightbox"
+            data-lightbox-close
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="lightbox-stage">
+          <button
+            type="button"
+            class="lightbox-btn lightbox-prev"
+            aria-label="Previous design"
+          >
+            ←
+          </button>
+          <figure class="lightbox-figure">
+            <img id="lightbox-img" src="" alt="" />
+            <figcaption class="lightbox-caption">
+              <h3 id="lightbox-title" class="lightbox-title"></h3>
+              <span id="lightbox-role" class="lightbox-role"></span>
+            </figcaption>
+          </figure>
+          <button
+            type="button"
+            class="lightbox-btn lightbox-next"
+            aria-label="Next design"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
