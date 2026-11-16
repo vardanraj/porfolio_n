@@ -264,9 +264,64 @@
           </header>
 
           <div class="projects-list">
-            <article class="project-row">
-              <button class="project-trigger" type="button" aria-expanded="false">
+            <article class="project-row" data-index="01">
+              <button
+                class="project-trigger"
+                type="button"
+                id="project-trigger-01"
+                aria-expanded="false"
+                aria-controls="project-panel-01"
+              >
                 <span class="project-index">01</span>
+                <div class="project-main">
+                  <h3 class="project-title" data-cursor="big">DNS Tunneling Detection</h3>
+                  <span class="project-stack">Real-Time · PCAP Analysis · DNS</span>
+                </div>
+                <span class="project-arrow" aria-hidden="true">+</span>
+              </button>
+              <div
+                class="project-panel"
+                id="project-panel-01"
+                role="region"
+                aria-labelledby="project-trigger-01"
+              >
+                <div class="project-panel-inner">
+                  <div class="project-details">
+                    <p class="project-summary">
+                      Security inspection workflow combining live DNS query monitoring with offline
+                      PCAP analysis to flag high-entropy subdomains, abnormal query frequencies, and
+                      suspected data exfiltration tunnels.
+                    </p>
+                    <ul class="project-highlights">
+                      <li>Dual mode: live capture + PCAP replay</li>
+                      <li>Entropy &amp; payload-length anomaly heuristics</li>
+                      <li>Built for rapid SOC/network triage</li>
+                    </ul>
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/vardanraj/Hcl_AeigesDNS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link"
+                        data-magnetic="0.2"
+                      >
+                        View Code on GitHub ↗
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-row" data-index="02">
+              <button
+                class="project-trigger"
+                type="button"
+                id="project-trigger-02"
+                aria-expanded="false"
+                aria-controls="project-panel-02"
+              >
+                <span class="project-index">02</span>
                 <div class="project-main">
                   <div class="project-title-wrap">
                     <h3 class="project-title" data-cursor="big">Net Observer</h3>
@@ -278,7 +333,12 @@
                 </div>
                 <span class="project-arrow" aria-hidden="true">+</span>
               </button>
-              <div class="project-panel">
+              <div
+                class="project-panel"
+                id="project-panel-02"
+                role="region"
+                aria-labelledby="project-trigger-02"
+              >
                 <div class="project-panel-inner">
                   <div class="project-details">
                     <p class="project-summary">
@@ -314,44 +374,6 @@
                     <p class="project-note">
                       Hosted on a free tier, so the first load may take up to a minute to wake up.
                     </p>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-row">
-              <button class="project-trigger" type="button" aria-expanded="false">
-                <span class="project-index">02</span>
-                <div class="project-main">
-                  <h3 class="project-title" data-cursor="big">DNS Tunneling Detection</h3>
-                  <span class="project-stack">Real-Time · PCAP Analysis · DNS</span>
-                </div>
-                <span class="project-arrow" aria-hidden="true">+</span>
-              </button>
-              <div class="project-panel">
-                <div class="project-panel-inner">
-                  <div class="project-details">
-                    <p class="project-summary">
-                      Security inspection workflow combining live DNS query monitoring with offline
-                      PCAP analysis to flag high-entropy subdomains, abnormal query frequencies, and
-                      suspected data exfiltration tunnels.
-                    </p>
-                    <ul class="project-highlights">
-                      <li>Dual mode: live capture + PCAP replay</li>
-                      <li>Entropy &amp; payload-length anomaly heuristics</li>
-                      <li>Built for rapid SOC/network triage</li>
-                    </ul>
-                    <div class="project-links">
-                      <a
-                        href="https://github.com/vardanraj/Hcl_AeigesDNS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                        data-magnetic="0.2"
-                      >
-                        View Code on GitHub ↗
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>

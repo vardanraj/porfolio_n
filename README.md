@@ -81,9 +81,8 @@ npm run preview
 
 ## Featured Projects
 
-- **Net Observer:** real-time network traffic dashboard ([live demo](https://net-observer.onrender.com) · [code](https://github.com/vardanraj/PacketTracer))
 - **DNS Tunneling Detection:** incident detection for DNS tunneling attacks, from live traffic or PCAP files ([code](https://github.com/vardanraj/Hcl_AeigesDNS))
-- **Live Voting System:** local-network voting for large auditoriums with poor internet
+- **Net Observer:** real-time network traffic dashboard ([live demo](https://net-observer.onrender.com) · [code](https://github.com/vardanraj/PacketTracer))
 
 ## Contact
 
